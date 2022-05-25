@@ -26,6 +26,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func rollTheDice(numberOfTimesToRoll, numberOfDiceUsed, numberOfSidesOfAllTheDice int) int {
@@ -47,6 +48,8 @@ func rollTheDice(numberOfTimesToRoll, numberOfDiceUsed, numberOfSidesOfAllTheDic
 }
 
 func main() {
+
+	rand.Seed(time.Now().UnixNano())
 
 	var (
 		numberOfTimesToRoll       = 4
